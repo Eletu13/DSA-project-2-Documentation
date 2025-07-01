@@ -28,8 +28,9 @@ This is where l include some basic lines of code or queries or even some of the 
 
 ### Queries and Answer 
 Below are the SQL queries develop for this analysis 
-1... which product category had the highest sales
-...
+
+which product category had the highest sales
+,,,
    SQL
    SELECT product category,
    SUM(sale) As total_sales
@@ -37,6 +38,7 @@ Below are the SQL queries develop for this analysis
    GROUP BY product_category 
    ORDER BY total_sales DESC
    LIMIT 1
+,,,
 
 
 
