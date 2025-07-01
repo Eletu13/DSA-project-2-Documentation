@@ -56,6 +56,12 @@ GROUP BY region
 ORDER BY total_sales ASC
 LIMIT 3;
 
+3. Total sales of appliances in Ontario
+
+   SELECT SUM(sales) AS total_sales
+FROM orders
+WHERE product_category = 'Appliances' AND region = 'Ontario';
+
 
 
   
