@@ -96,7 +96,7 @@ GROUP BY customer_name
 ORDER BY total_orders DESC
 LIMIT 1;
 
-19.Most profitable consumer customer 
+9.Most profitable consumer customer 
 
 SELECT customer_name, SUM(profit) AS total_profit
 FROM orders
@@ -104,6 +104,15 @@ WHERE customer_segment = 'Consumer'
 GROUP BY customer_name
 ORDER BY total_profit DESC
 LIMIT 1;
+
+10. Customer who returned items
+
+    SELECT customer_name, COUNT(return_id) AS total_returns
+FROM returns
+GROUP BY customer_name
+ORDER BY total_returns DESC;
+
+11. shipping cost efficiency 
 
 
 
