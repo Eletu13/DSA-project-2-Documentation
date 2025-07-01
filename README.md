@@ -115,6 +115,11 @@ ORDER BY total_returns DESC;
 11. shipping cost efficiency 
 
 
+SELECT shipping_method, order_priority, SUM(shipping_cost) AS total_shipping_cost
+FROM orders
+GROUP BY shipping_method, order_priority
+ORDER BY total_shipping_cost DESC;
+
 
 
 
