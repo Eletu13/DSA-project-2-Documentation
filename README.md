@@ -38,8 +38,23 @@ which product category had the highest sales
    GROUP BY product_category 
    ORDER BY total_sales DESC
    LIMIT 1
-,,,
-2. what are the top3 and bottom3 regions in terms of sales 
+
+2. What are the top3 and bottom3 regions in terms of sales
+
+   
+-- Top 3 regions
+SELECT region, SUM(sales) AS total_sales
+FROM orders
+GROUP BY region
+ORDER BY total_sales DESC
+LIMIT 3;
+
+-- Bottom 3 regions
+SELECT region, SUM(sales) AS total_sales
+FROM orders
+GROUP BY region
+ORDER BY total_sales ASC
+LIMIT 3;
 
 
 
