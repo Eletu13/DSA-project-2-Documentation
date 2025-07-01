@@ -29,7 +29,7 @@ This is where l include some basic lines of code or queries or even some of the 
 ### Queries and Answer 
 Below are the SQL queries develop for this analysis 
 
-which product category had the highest sales
+1. which product category had the highest sales
 ,,,
    SQL
    SELECT product category,
@@ -61,6 +61,20 @@ LIMIT 3;
    SELECT SUM(sales) AS total_sales
 FROM orders
 WHERE product_category = 'Appliances' AND region = 'Ontario';
+
+4. Increasing revenue from bottom10 customer
+ To increase revenue feom the bottom10 customer KMS could consider 
+. improving customer service and engagement 
+. offering personalized discoun
+
+6. Shipping method with highest cost
+
+   SELECT shipping_method, SUM(shipping_cost) AS total_shipping_cost
+FROM orders
+GROUP BY shipping_method
+ORDER BY total_shipping_cost DESC
+LIMIT 1;
+
 
 
 
