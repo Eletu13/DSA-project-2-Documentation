@@ -75,6 +75,15 @@ GROUP BY shipping_method
 ORDER BY total_shipping_cost DESC
 LIMIT 1;
 
+7. Most valuable customers
+   
+SELECT customer_name, SUM(sales) AS total_sales
+FROM orders
+GROUP BY customer_name
+ORDER BY total_sales DESC
+LIMIT 10;
+
+
 
 
 
