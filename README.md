@@ -39,7 +39,7 @@ which product category had the highest sales
    ORDER BY total_sales DESC
    LIMIT 1
 ,,,
-
+2. what are the top3 and bottom3 regions in terms of sales 
 
 
 
