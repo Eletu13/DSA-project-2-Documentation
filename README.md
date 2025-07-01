@@ -57,40 +57,46 @@ ORDER BY total_sales ASC
 LIMIT 3;
 
 3. Total sales of appliances in Ontario
-
-   SELECT SUM(sales) AS total_sales
+     SELECT SUM(sales) AS total_sales
 FROM orders
 WHERE product_category = 'Appliances' AND region = 'Ontario';
 
-4. Increasing revenue from bottom10 customer
+5. Increasing revenue from bottom10 customer
  To increase revenue feom the bottom10 customer KMS could consider 
 . improving customer service and engagement 
 . offering personalized discoun
 
-5. Shipping method with highest cost
-
-   SELECT shipping_method, SUM(shipping_cost) AS total_shipping_cost
+6. Shipping method with highest cost
+  SELECT shipping_method, SUM(shipping_cost) AS total_shipping_cost
 FROM orders
 GROUP BY shipping_method
 ORDER BY total_shipping_cost DESC
 LIMIT 1;
 
-6. Most valuable customers
-   
-SELECT customer_name, SUM(sales) AS total_sales
+7. Most valuable customers
+   SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 GROUP BY customer_name
 ORDER BY total_sales DESC
 LIMIT 10;
 
-7. Small business customer with highest sales
-   
-SELECT customer_name, SUM(sales) AS total_sales
+8. Small business customer with highest sales
+   SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 WHERE customer_segment = 'Small Business'
 GROUP BY customer_name
 ORDER BY total_sales DESC
 LIMIT 1;
+
+9. Corporate customer with most order
+   SELECT customer_name, COUNT(order_id) AS total_orders
+FROM orders
+WHERE customer_segment = 'Corporate'
+GROUP BY customer_name
+ORDER BY total_orders DESC
+LIMIT 1;
+
+10.Most profitable consumer customer 
 
 
 
