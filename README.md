@@ -23,8 +23,12 @@ In the initial phase of the data cleaning and preparation, l perform the followi
 2. Handling mising variables
 3. Data cleaning and formatting
 
-### Exploratory Data Analysis 
-Exploratory Data Analysis (EDA) is a crucial step in understanding your data. For the Kultra Mega Store Inventory, here are some potential notes and analyses l could include under EDA:
+### Data Analysis 
+This is where l include some basic lines of code or queries or even some of the Dax expression used during my analysis.
+
+### Queries and Answer 
+Below are the SQL queries develop for this analysis 
+
 
 
 
