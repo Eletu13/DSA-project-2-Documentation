@@ -67,7 +67,7 @@ WHERE product_category = 'Appliances' AND region = 'Ontario';
 . improving customer service and engagement 
 . offering personalized discoun
 
-6. Shipping method with highest cost
+5. Shipping method with highest cost
 
    SELECT shipping_method, SUM(shipping_cost) AS total_shipping_cost
 FROM orders
@@ -75,13 +75,22 @@ GROUP BY shipping_method
 ORDER BY total_shipping_cost DESC
 LIMIT 1;
 
-7. Most valuable customers
+6. Most valuable customers
    
 SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 GROUP BY customer_name
 ORDER BY total_sales DESC
 LIMIT 10;
+
+7. Small business customer with highest sales
+   
+SELECT customer_name, SUM(sales) AS total_sales
+FROM orders
+WHERE customer_segment = 'Small Business'
+GROUP BY customer_name
+ORDER BY total_sales DESC
+LIMIT 1;
 
 
 
