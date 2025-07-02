@@ -38,22 +38,21 @@ Below are the SQL queries develop for this analysis
    GROUP BY product_category 
    ORDER BY total_sales DESC
    LIMIT 1
-   ```
-   
+   ```  
 
-3. What are the top3 and bottom3 regions in terms of sales
+2. What are the top3 and bottom3 regions in terms of sales
 
    ```
       SQL
--- Top 3 regions
+ Top 3 regions
 SELECT region, SUM(sales) AS total_sales
 FROM orders
 GROUP BY region
 ORDER BY total_sales DESC
 LIMIT 3;
 ```
-```
-   SQL
+
+   
 -- Bottom 3 regions
 SELECT region, SUM(sales) AS total_sales
 FROM orders
