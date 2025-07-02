@@ -148,6 +148,10 @@ FROM orders
 GROUP BY shipping_method, order_priority
 ORDER BY total_shipping_cost DESC; ```
 
+### Conclusion
+This project demonstrate the power of SQL in analysis product with retail and wholesale content.The
+ queries include provide an extensive overview of how to interact with and extract meaningful insight
+from product inventory 
 
 
 
