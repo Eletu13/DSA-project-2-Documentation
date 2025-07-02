@@ -40,26 +40,26 @@ Below are the SQL queries develop for this analysis
    LIMIT 1
    ```  
 
-2. What are the top3 and bottom3 regions in terms of sales
-
-   ```
-      SQL
+2. What are the top3 and bottom3 regions in terms of sale
+ ```
+    SQL
  Top 3 regions
 SELECT region, SUM(sales) AS total_sales
 FROM orders
 GROUP BY region
 ORDER BY total_sales DESC
 LIMIT 3;
-```
-
-   
--- Bottom 3 regions
+  ```
+ ```
+    SQL
+Bottom 3 regions
 SELECT region, SUM(sales) AS total_sales
 FROM orders
 GROUP BY region
 ORDER BY total_sales ASC
 LIMIT 3;
 ```
+
 ```
    SQL
 3. Total sales of appliances in Ontario
