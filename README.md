@@ -69,63 +69,81 @@ WHERE product_category = 'Appliances' AND region = 'Ontario';
 ```
 
 4. Increasing revenue from bottom10 customer
+   
  To increase revenue feom the bottom10 customer KMS could consider 
-. improving customer service and engagement 
-. offering personalized discoun
+- Improving customer service and engagement 
+-  offering personalized discount
+  
 
 5. Shipping method with highest cost
+ ```
+    SQL
   SELECT shipping_method, SUM(shipping_cost) AS total_shipping_cost
 FROM orders
 GROUP BY shipping_method
 ORDER BY total_shipping_cost DESC
 LIMIT 1;
-
-6. Most valuable customers
+```
+```
+   SQL
+7. Most valuable customers
    SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 GROUP BY customer_name
 ORDER BY total_sales DESC
 LIMIT 10;
+```
 
-7. Small business customer with highest sales
+ ```
+   SQL
+8. Small business customer with highest sales
    SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 WHERE customer_segment = 'Small Business'
 GROUP BY customer_name
 ORDER BY total_sales DESC
 LIMIT 1;
+```
 
-8. Corporate customer with most order
+```
+   SQL
+9. Corporate customer with most order
    SELECT customer_name, COUNT(order_id) AS total_orders
 FROM orders
 WHERE customer_segment = 'Corporate'
 GROUP BY customer_name
 ORDER BY total_orders DESC
 LIMIT 1;
+ ```
 
-9.Most profitable consumer customer 
-
+10.Most profitable consumer customer
+ ```
+    SQL
 SELECT customer_name, SUM(profit) AS total_profit
 FROM orders
 WHERE customer_segment = 'Consumer'
 GROUP BY customer_name
 ORDER BY total_profit DESC
 LIMIT 1;
+ ```
 
-10. Customer who returned items
-
-    SELECT customer_name, COUNT(return_id) AS total_returns
+    
+11. Customer who returned items
+ ```
+    SQL
+  SELECT customer_name, COUNT(return_id) AS total_returns
 FROM returns
 GROUP BY customer_name
 ORDER BY total_returns DESC;
+```
 
-11. shipping cost efficiency 
-
-
+11. shipping cost efficiency
+ ```
+    SQL
 SELECT shipping_method, order_priority, SUM(shipping_cost) AS total_shipping_cost
 FROM orders
 GROUP BY shipping_method, order_priority
-ORDER BY total_shipping_cost DESC;
+ORDER BY total_shipping_cost DESC; ```
 
 
 
