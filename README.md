@@ -30,16 +30,18 @@ This is where l include some basic lines of code or queries or even some of the 
 Below are the SQL queries develop for this analysis 
 
 1. which product category had the highest sales
-,,,
-   SQL
+   ```
+       SQL
    SELECT product category,
    SUM(sale) As total_sales
    FROM order
    GROUP BY product_category 
    ORDER BY total_sales DESC
    LIMIT 1
+   ```
+   
 
-2. What are the top3 and bottom3 regions in terms of sales
+3. What are the top3 and bottom3 regions in terms of sales
 
    
 -- Top 3 regions
