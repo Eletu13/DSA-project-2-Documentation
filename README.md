@@ -85,7 +85,7 @@ ORDER BY total_shipping_cost DESC
 LIMIT 1;
 ```
 
-7. Most valuable customers
+6. Most valuable customers
  ```
       SQL
    SELECT customer_name, SUM(sales) AS total_sales
@@ -96,7 +96,7 @@ LIMIT 10;
 ```
 
 
-8. Small business customer with highest sales
+7. Small business customer with highest sales
  ```
     SQL
    SELECT customer_name, SUM(sales) AS total_sales
@@ -108,7 +108,7 @@ LIMIT 1;
 ```
 
 
-9. Corporate customer with most order
+8. Corporate customer with most order
  ```
     SQL
    SELECT customer_name, COUNT(order_id) AS total_orders
@@ -119,7 +119,7 @@ ORDER BY total_orders DESC
 LIMIT 1;
  ```
 
-10.Most profitable consumer customer 
+9.Most profitable consumer customer 
 ```
     SQL
 SELECT customer_name, SUM(profit) AS total_profit
@@ -131,7 +131,7 @@ LIMIT 1;
  ```
 
     
-11. Customer who returned items
+10. Customer who returned items
  ``` 
     SQL
   SELECT customer_name, COUNT(return_id) AS total_returns
