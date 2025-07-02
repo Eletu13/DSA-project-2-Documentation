@@ -60,10 +60,10 @@ ORDER BY total_sales ASC
 LIMIT 3;
 ```
 
-```
-   SQL
 3. Total sales of appliances in Ontario
-     SELECT SUM(sales) AS total_sales
+  ```
+     SQL
+  SELECT SUM(sales) AS total_sales
 FROM orders
 WHERE product_category = 'Appliances' AND region = 'Ontario';
 ```
@@ -84,9 +84,10 @@ GROUP BY shipping_method
 ORDER BY total_shipping_cost DESC
 LIMIT 1;
 ```
-```
-   SQL
+
 7. Most valuable customers
+   ```
+      SQL
    SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 GROUP BY customer_name
@@ -94,9 +95,10 @@ ORDER BY total_sales DESC
 LIMIT 10;
 ```
 
- ```
-   SQL
+
 8. Small business customer with highest sales
+```
+    SQL
    SELECT customer_name, SUM(sales) AS total_sales
 FROM orders
 WHERE customer_segment = 'Small Business'
@@ -105,9 +107,10 @@ ORDER BY total_sales DESC
 LIMIT 1;
 ```
 
-```
-   SQL
+
 9. Corporate customer with most order
+```
+    SQL
    SELECT customer_name, COUNT(order_id) AS total_orders
 FROM orders
 WHERE customer_segment = 'Corporate'
@@ -118,7 +121,7 @@ LIMIT 1;
 
 10.Most profitable consumer customer
  ```
-    SQL
+      SQL
 SELECT customer_name, SUM(profit) AS total_profit
 FROM orders
 WHERE customer_segment = 'Consumer'
