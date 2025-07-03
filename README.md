@@ -152,11 +152,4 @@ ORDER BY total_shipping_cost DESC; ```
 
 
 
-###  Conclusion 
-This project demonstrate the power of SQL in analysis product within retail and wholesale content. The queries include provide an extensive overview of how to interact with and extract meaningful insight from product analysis.
-
-
-
-
-
   
